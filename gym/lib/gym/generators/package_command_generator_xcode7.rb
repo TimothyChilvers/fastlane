@@ -17,7 +17,7 @@ module Gym
   # Responsible for building the fully working xcodebuild command
   class PackageCommandGeneratorXcode7
     class << self
-      DEFAULT_EXPORT_METHOD = "app-store"
+      DEFAULT_EXPORT_METHOD = "app-store-connect"
 
       def generate
         parts = ["/usr/bin/xcrun #{wrap_xcodebuild.shellescape} -exportArchive"]

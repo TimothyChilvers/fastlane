@@ -38,7 +38,7 @@ module Fastlane
       end
 
       def self.set_profile_type(values, enterprise)
-        profile_type = "app-store"
+        profile_type = "app-store-connect"
         profile_type = "ad-hoc" if values[:adhoc]
         profile_type = "development" if values[:development]
         profile_type = "developer-id" if values[:developer_id]
