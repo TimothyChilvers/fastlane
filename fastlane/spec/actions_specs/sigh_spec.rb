@@ -20,7 +20,7 @@ describe Fastlane do
 
         expect(Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::SIGH_PROFILE_PATH]).to eq(@profile_path)
         expect(Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::SIGH_PROFILE_PATHS]).to eq([@profile_path])
-        expect(Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::SIGH_PROFILE_TYPE]).to eq("app-store")
+        expect(Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::SIGH_PROFILE_TYPE]).to eq("app-store-connect")
         expect(Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::SIGH_UUID]).to eq("uuid")
         expect(Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::SIGH_NAME]).to eq("name")
       end
