@@ -190,7 +190,7 @@ module Gym
 
         # Overrides export options if needed
         hash[:method] = Gym.config[:export_method]
-        if Gym.config[:export_method] == 'app-store'
+        if Gym.config[:export_method] == 'app-store-connect'
           hash[:uploadSymbols] = (Gym.config[:include_symbols] ? true : false) unless Gym.config[:include_symbols].nil?
           hash[:uploadBitcode] = (Gym.config[:include_bitcode] ? true : false) unless Gym.config[:include_bitcode].nil?
         end
