@@ -147,7 +147,7 @@ Optional: If _gym_ can't automatically detect the provisioning profiles to use, 
 ```ruby
 build_app(
   scheme: "Release",
-  export_method: "app-store",
+  export_method: "app-store-connect",
   export_options: {
     provisioningProfiles: {
       "com.example.bundleid" => "Provisioning Profile Name",

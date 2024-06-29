@@ -118,7 +118,7 @@ describe Gym do
       config_path = Gym::PackageCommandGeneratorXcode7.config_path
 
       expect(Plist.parse_xml(config_path)).to eq({
-        'method' => "app-store"
+        'method' => "app-store-connect"
       })
     end
 
@@ -166,7 +166,7 @@ describe Gym do
       options = {
         project: "./gym/examples/standard/Example.xcodeproj",
         export_options: "./gym/examples/standard/ExampleExport.plist",
-        export_method: "app-store",
+        export_method: "app-store-connect",
         include_symbols: false,
         include_bitcode: true,
         export_team_id: "1234567890"
@@ -205,7 +205,7 @@ describe Gym do
           uploadBitcode: true,
           teamID: "1234567890"
         },
-        export_method: "app-store",
+        export_method: "app-store-connect",
         include_symbols: true,
         include_bitcode: false,
         export_team_id: "ASDFGHJK"
