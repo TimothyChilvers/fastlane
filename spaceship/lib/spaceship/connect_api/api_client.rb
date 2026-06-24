@@ -41,7 +41,7 @@ module Spaceship
 
           @client = Faraday.new(hostname, options) do |c|
             c.response(:json, content_type: /\bjson$/)
-            c.response(:plist, content_type: /\bplist$/)
+            c.response(:plist)
             c.use(FaradayMiddleware::RelsMiddleware)
             c.use(Spaceship::StatsMiddleware)
             c.use(Spaceship::TokenRefreshMiddleware, token)

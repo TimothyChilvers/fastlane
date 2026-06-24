@@ -1,7 +1,6 @@
 require 'babosa'
 require 'faraday' # HTTP Client
 require 'faraday-cookie_jar'
-require 'faraday_middleware'
 require 'logger'
 require 'tmpdir'
 require 'cgi'
@@ -213,7 +212,7 @@ module Spaceship
 
       @client = Faraday.new(self.class.hostname, options) do |c|
         c.response(:json, content_type: /\bjson$/)
-        c.response(:plist, content_type: /\bplist$/)
+        c.response(:plist)
         c.use(:cookie_jar, jar: @cookie)
         c.use(FaradayMiddleware::RelsMiddleware)
         c.use(Spaceship::StatsMiddleware)

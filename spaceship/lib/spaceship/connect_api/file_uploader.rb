@@ -1,6 +1,6 @@
 require 'faraday' # HTTP Client
 require 'faraday-cookie_jar'
-require 'faraday_middleware'
+require_relative '../helper/plist_middleware'
 
 require 'spaceship/globals'
 
@@ -76,7 +76,7 @@ module Spaceship
 
         @client ||= Faraday.new(options) do |c|
           c.response(:json, content_type: /\bjson$/)
-          c.response(:plist, content_type: /\bplist$/)
+          c.response(:plist)
           c.adapter(Faraday.default_adapter)
 
           if ENV['SPACESHIP_DEBUG']
